@@ -33,13 +33,13 @@ jobs:
         run: |
           # If your Angular project is in a subfolder, cd there first
           # cd client
-          npm run build -- --base-href=/${{ github.event.repository.name }}/
+          npm run build -- --base-href=/digital-library-project/
 
       # Upload the built site to Pages as an artifact
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/${{ github.event.repository.name }}-project/browser
+          path: dist/digital-library
 
   deploy:
     environment:
