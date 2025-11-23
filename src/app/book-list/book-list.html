@@ -1,14 +1,23 @@
-<div class="card lg:card-side bg-base-100 shadow-sm">
-  <figure>
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp"
-      alt="Album" />
-  </figure>
-  <div class="card-body">
-    <h2 class="card-title">New album is released!</h2>
-    <p>Click the button to listen on Spotiwhy app.</p>
-    <div class="card-actions justify-end">
-      <button class="btn btn-primary">Listen</button>
+<div
+    class="search-results overflow-scroll"
+    infiniteScroll
+    [infiniteScrollDistance]="2"
+    [infiniteScrollThrottle]="50"
+    (scrolled)="getBooks()">
+@for (book of books(); track book.id) {
+    <div class="card card-side bg-base-100 mt-4 shadow-none sm:shadow">
+        <figure>
+            <img class="book-list-img" [src]="book.imgSource" alt="{{ book.title }}" />
+        </figure>
+        <div class="card-body">
+            <h2 class="card-title">{{book.title}}</h2>
+            <p>{{book.description.slice(0, 50).concat(" ...")}}</p>
+            <div class="card-actions justify-end">
+                <button class="btn btn-primary">More Infomation</button>
+            </div>
+        </div>
     </div>
-  </div>
+} @empty {
+    <span class="loading loading-bars loading-xl"></span>
+}
 </div>

@@ -1,0 +1,14 @@
+<div class="flex flex-col gap-2">
+  <div class="join bg-base">
+    @for (item of ['All', 'Popular', 'New', 'Coming soon']; track $index) {
+      <button
+        class="join-item btn bg-base-100 flex-1 sm:flex-none"
+        [routerLink]="item.toLowerCase().replace(' ', '-')"
+        routerLinkActive="btn-active bg-base-300"
+        [routerLinkActiveOptions]="{exact: true}">
+        {{item}}
+      </button>
+    }
+  </div>
+  <router-outlet></router-outlet>
+</div>

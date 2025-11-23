@@ -1,18 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { BookMiniNavigation } from './book-mini-navigation';
 
-import { Home } from './home';
-
-describe('Home', () => {
-  let component: Home;
-  let fixture: ComponentFixture<Home>;
+describe('BookMiniNavigation', () => {
+  let component: BookMiniNavigation;
+  let fixture: ComponentFixture<BookMiniNavigation>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Home]
+      imports: [BookMiniNavigation]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Home);
+    fixture = TestBed.createComponent(BookMiniNavigation);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

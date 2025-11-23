@@ -1,5 +1,7 @@
-<main class="flex flex-col h-screen">
-    <app-navigation-menu/>
-    <router-outlet/>
-    <app-footer class="mt-auto"></app-footer>
+<main class="flex flex-col min-h-screen w-full">
+  <app-navigation-menu class="shadow mb-8"></app-navigation-menu>
+  <div class="sm:px-16 px-4">
+    <app-book-mini-navigation></app-book-mini-navigation>
+  </div>
+  <app-footer class="mt-auto"></app-footer>
 </main>
