@@ -1,7 +1,7 @@
 <div class="navbar bg-base-100 p-0 sm:px-16 px-4">
-  <div id="logo" class="flex-1">
-    <a class="btn btn-ghost text-xl p-0 border-0" (click)="goToPage(``)" style="font-family: Expletus Sans; font-weight: 600;">Digital Library</a>
-  </div>
+    <a class="btn btn-ghost p-0 border-0 mr-auto" (click)="goToPage(``)">
+      <app-logo class="flex items-center gap-1"></app-logo>
+    </a>
   <div class="flex gap-2">
     <input type="text" placeholder="Search for a book" class="input input-bordered w-24 md:w-auto"/>
     <div class="dropdown dropdown-end">

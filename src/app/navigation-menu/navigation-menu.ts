@@ -4,10 +4,11 @@ import { Router } from '@angular/router';
 import { Modal } from "../modal/modal";
 import { RegistrationForm } from '../registration-form/registration-form';
 import { LoginForm } from '../login-form/login-form';
+import { Logo } from "../logo/logo";
 
 @Component({
   selector: 'app-navigation-menu',
-  imports: [ThemeController, Modal],
+  imports: [ThemeController, Modal, Logo],
   templateUrl: './navigation-menu.html',
   styleUrl: './navigation-menu.css',
 })
